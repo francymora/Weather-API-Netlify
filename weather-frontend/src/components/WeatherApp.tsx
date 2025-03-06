@@ -20,7 +20,7 @@ const WeatherApp = () => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:3000/api/weather/${city.toLowerCase()}`);
+      const response = await fetch(`https://6963-94-119-32-21.ngrok-free.app/api/weather/${city.toLowerCase()}`);
       if (!response.ok) throw new Error("City not found");
 
       const data: WeatherData = await response.json();
